@@ -1,0 +1,928 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* COMMOM STYLES */
+* {
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+:root {
+  --primary-color: #6edae6;
+  --black-color: #000;
+  --white-color: #fff;
+}
+body {
+  overflow-x: hidden;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* END OF COMMOM STYLES */
+/* SECTION 1 */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0 99%);
+}
+/* logo */
+.logo {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+.logo i {
+  font-size: 10rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+/* end of logo */
+/* navbar */
+.navbar {
+  position: absolute;
+  top: 3rem;
+  right: 10%;
+}
+.navbar-link {
+  font-size: 2rem;
+  display: inline-block;
+  margin: 0 3rem;
+  color: var(--black-color);
+  transition: transform 0.5s;
+}
+.navbar-link:hover {
+  transform: scale(1.5);
+}
+
+/* end of navbar */
+/* cube */
+.cube-wrapper {
+  perspective: 100rem;
+}
+.cube {
+  width: 25rem;
+  height: 50rem;
+  position: relative;
+  top: -2rem;
+  transform-style: preserve-3d;
+  position: relative;
+  transform: rotateX(0deg) rotateY(40deg) rotateZ(0);
+  transition: transform 0.5s;
+}
+.cube-front-side,
+.cube-back-side {
+  width: 100%;
+  height: 100%;
+  background-color: #fee;
+  position: absolute;
+  transform-style: preserve-3d;
+  box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
+}
+.cube-front-side {
+  padding: 2rem;
+  transform: translateZ(6rem);
+}
+.cube-back-side {
+  transform: translateZ(-6rem);
+}
+.cube-back-side i {
+  font-size: 12rem;
+  color: var(--primary-color);
+  transform: rotateY(180deg);
+  text-shadow: 0.1rem 0.1rem 0.2rem #aaa, -0.1rem -0.1rem 0.2rem #aaa;
+}
+.cube-front-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cube-front-side::before,
+.cube-front-side::after {
+  content: "";
+  width: 100%;
+  height: 12rem;
+  position: absolute;
+  background-color: #fee;
+}
+.cube-front-side::before {
+  transform: rotateX(90deg);
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+}
+.cube-front-side::after {
+  transform: rotateX(-90deg);
+  top: 0;
+  left: 0;
+  transform-origin: top;
+}
+
+.cube-back-side::before,
+.cube-back-side::after {
+  content: "Iphone";
+  height: 100%;
+  width: 12rem;
+  background-color: #fee;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--black-color);
+}
+
+.cube-back-side::before {
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transform: rotateY(-90deg);
+}
+.cube-back-side::after {
+  top: 0;
+  right: 0;
+  transform-origin: right;
+  transform: rotateY(90deg);
+}
+/* end of cube */
+
+/* controls */
+.controls {
+  position: absolute;
+  bottom: -11rem;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 10rem;
+  height: 10rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1rem solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+}
+.controls a {
+  position: absolute;
+  transform: translateX(-50%);
+}
+.controls i {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+.controls a:hover i {
+  opacity: 1;
+}
+.controls a:nth-child(1) {
+  top: 0;
+  left: 50%;
+}
+.controls a:nth-child(2) {
+  bottom: 0;
+  left: 50%;
+}
+.controls a:nth-child(3) {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.controls a:nth-child(4) {
+  right: 0;
+  top: 48%;
+  transform: translateY(-50%);
+}
+.controls a:nth-child(5) {
+  top: 10%;
+  right: 10%;
+  transform: rotate(-45deg);
+}
+.controls a:nth-child(6) {
+  bottom: 10%;
+  left: 10%;
+  transform: rotate(-45deg);
+}
+/* end of controls */
+/* banner */
+.section-1-banner {
+  flex-direction: column;
+}
+.section-1-banner h1 {
+  font-size: 12rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+.section-1-banner p {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  margin: 6rem 0 4rem;
+}
+.section-1-banner span {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.section-1-banner button {
+  padding: 2rem 4rem;
+  cursor: pointer;
+  border: none;
+  font-size: 2rem;
+  color: var(--primary-color);
+  background-color: var(--black-color);
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+  clip-path: polygon(
+    50% 0%,
+    81% 5%,
+    100% 0,
+    100% 100%,
+    80% 95%,
+    50% 100%,
+    20% 95%,
+    0 100%,
+    0 0,
+    23% 5%
+  );
+  transition: 0.5s clip-path;
+}
+.section-1-banner button:hover {
+  clip-path: polygon(
+    40% 15%,
+    77% 15%,
+    100% 10%,
+    100% 90%,
+    75% 85%,
+    40% 85%,
+    30% 100%,
+    0 50%,
+    0 50%,
+    30% 0
+  );
+}
+/* end of banner */
+/* slideshow */
+.slideshow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.slideshow div {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 5s;
+}
+.slideshow .change {
+  opacity: 1;
+}
+/* end of slideshow */
+/* END OF SECTION 1 */
+/* SECTION 2 */
+.section-2 {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10rem 0;
+}
+
+.section-2-heading {
+  font-size: 12rem;
+  font-weight: 200;
+  margin-bottom: 5rem;
+  position: relative;
+}
+.section-2-heading::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 30vw;
+  position: absolute;
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--white-color)
+  );
+  transform-origin: left top;
+  transform: skewX(-40deg);
+  z-index: -1;
+  border-radius: 2rem;
+}
+.section-2-images {
+  width: 48vw;
+  height: 50rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--white-color)
+  );
+  border-radius: 3rem;
+}
+.section-2-images img {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+  position: absolute;
+}
+.iphone-img-1 {
+  transition: opacity 1s;
+}
+.iphone-img-2 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.section-2-images:hover .iphone-img-2 {
+  opacity: 1;
+}
+.section-2-images:hover .iphone-img-1 {
+  opacity: 0;
+}
+.iphone-btns {
+  display: flex;
+}
+.iphone-btn {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 3rem;
+  background-image: linear-gradient(rgb(51, 51, 51) 60%, rgb(82, 82, 82));
+  border-radius: 50%;
+  position: relative;
+}
+.iphone-btn i {
+  color: var(--primary-color);
+  font-size: 2rem;
+  position: absolute;
+}
+.iphone-btn::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+}
+.iphone-btn span {
+  transform: scale(0);
+  color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  top: -4rem;
+  width: max-content;
+  background: rgb(51, 51, 51);
+  position: absolute;
+  transition: 0.5s transform;
+}
+.iphone-btn:hover span {
+  transform: scale(1);
+}
+/* END OF SECTION 2 */
+/* SECTION 3 */
+.section-3 {
+  width: 100%;
+  height: 160vh;
+  flex-direction: column;
+  padding: 15rem 0;
+  background-color: var(--black-color);
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 93%);
+}
+.section-3-heading {
+  font-size: 10rem;
+  color: var(--primary-color);
+  font-weight: 200;
+  margin-bottom: 15rem;
+  text-align: center;
+}
+.section-3-content {
+  width: 80%;
+  flex-direction: column;
+  position: relative;
+  perspective: 1000rem;
+}
+.section-3-content img {
+  width: inherit;
+}
+.mac-img-1 {
+  transform-origin: bottom;
+  transform: rotateX(-80deg);
+  transition: transform 3s;
+}
+.change .mac-img-1 {
+  transform: rotateX(0);
+}
+.loading-wrapper {
+  position: absolute;
+  top: 6%;
+  width: 60%;
+  height: 80%;
+  background: linear-gradient(
+      rgba(255, 255, 2555, 0.65),
+      rgba(255, 255, 2555, 0.65)
+    ),
+    url(./images/MacBook/macbook-1-desktop.png) center no-repeat;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s 2s;
+}
+.change .loading-wrapper {
+  opacity: 1;
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  background-color: var(--black-color);
+  transition: 1s 5s opacity;
+}
+.change .loading {
+  opacity: 0;
+}
+.loading i {
+  font-size: 10rem;
+  color: var(--white-color);
+  margin-bottom: 4rem;
+}
+.progress-bar {
+  width: 20rem;
+  height: 0.2rem;
+
+  position: relative;
+  background-color: #888;
+}
+
+.progress-bar::after {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  background: var(--white-color);
+  transition: 2.5s 2s width;
+}
+.change .progress-bar::after {
+  width: 100%;
+}
+.macbook-info {
+  position: absolute;
+  width: 70rem;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s 6s;
+}
+.change .macbook-info {
+  opacity: 1;
+  visibility: visible;
+}
+.macbook-info-heading {
+  font-size: 6rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+.macbook-price {
+  font-size: 3rem;
+  font-weight: 200;
+  color: var(--black-color);
+}
+.macbook-btn {
+  width: 18rem;
+  border: none;
+  font-size: 3rem;
+  margin-top: 2rem;
+  color: var(--primary-color);
+  background-color: rgb(58, 57, 57);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+/* END OF SECTION 3 */
+/* SECTION 4 */
+.section-4 {
+  width: 100%;
+  height: 140vh;
+
+  flex-direction: column;
+  position: relative;
+}
+.section-4-heading {
+  text-align: center;
+  font-size: 10rem;
+  font-weight: 200;
+  color: var(--primary-color);
+  text-shadow: 0.3rem 0.3rem 0.2rem #ddd;
+  margin-top: 6rem;
+}
+.watches {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.watches > div {
+  position: absolute;
+}
+
+.watch-cases {
+  flex-direction: column;
+  margin-bottom: 10rem; /* 35*/
+  transition: all 0.5s;
+}
+.change.watch-cases {
+  animation: watchFirstB 4s forwards;
+}
+.watch-bands {
+  margin-left: 10rem; /* 35*/
+  transition: all 0.5s;
+}
+.change.watch-bands {
+  animation: watchFirstL 4s forwards;
+}
+
+@keyframes watchFirstL {
+  0% {
+    margin-left: 10rem;
+  }
+  100% {
+    margin-left: 35rem;
+  }
+}
+@keyframes watchFirstB {
+  0% {
+    margin-bottom: 10rem;
+  }
+  100% {
+    margin-bottom: 35rem;
+  }
+}
+.watch-case-img,
+.watch-band-img {
+  width: 35rem;
+  height: 35rem;
+  object-fit: contain;
+}
+.watch-control {
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.hideControl {
+  opacity: 0;
+  visibility: hidden;
+}
+.watch-control i {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+.watch-top-control {
+  top: 25%;
+  left: 50%;
+}
+.watch-down-control {
+  bottom: 10%;
+  left: 50%;
+}
+.watch-left-control {
+  top: 55%;
+  left: 10%;
+}
+.watch-right-control {
+  top: 55%;
+  right: 10%;
+}
+
+.section-4-btn {
+  position: absolute;
+  right: 20%;
+  bottom: 15%;
+  font-size: 4rem;
+  color: var(--primary-color);
+  font-weight: 200;
+  background-color: var(--black-color);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+/* END OF SECTION 4 */
+/* SECTION 5 */
+.section-5 {
+  width: 100%;
+  height: 120vh;
+  margin-top: 15rem;
+}
+
+.airpods {
+  display: flex;
+  width: 70%;
+  height: 80%;
+  position: relative;
+  border: 1px solid var(--primary-color);
+  border-radius: 1rem;
+}
+.section-5-heading {
+  font-size: 8rem;
+  font-weight: 300;
+  color: var(--white-color);
+  text-shadow: 0.3rem 0.3rem 0.3rem rgb(184, 182, 182);
+  position: absolute;
+  top: 10rem;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+.section-5-a {
+  color: var(--primary-color);
+}
+.airpods img {
+  width: 50%;
+  height: 100%;
+  object-fit: contain;
+}
+.airpods-img-2 {
+  background-color: var(--primary-color);
+}
+.section-5-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.airpod-btn:first-child {
+  margin: 0rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+.airpod-btn {
+  width: 15rem;
+  height: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 3rem;
+  margin: 0 4rem;
+  cursor: pointer;
+  font-weight: 400;
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  background-color: var(--white-color);
+}
+/* END OF SECTION 5 */
+/* SECTION 6 */
+.footer {
+  height: 40vh;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+}
+.footer-imgs img {
+  width: 10rem;
+  margin: 0 1rem;
+}
+.copyright {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  letter-spacing: 0.1;
+}
+.github {
+  transition: all 0.5s;
+  color: var(--black-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+.github:hover {
+  letter-spacing: 0.4rem;
+  color: var(--primary-color);
+}
+/* END OF SECTION 6 */
+/* RESPONSIVE */
+@media (max-width: 1500px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 1100px) {
+  html {
+    font-size: 45%;
+  }
+  .navbar-link {
+    font-weight: 600;
+  }
+  .section-1-banner h1 {
+    font-size: 8rem;
+  }
+  .section-1-banner p {
+    font-size: 4rem;
+  }
+  .section-4-btn {
+    right: 5%;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-4-heading {
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 750px) {
+  .logo {
+    top: 0;
+    left: 2rem;
+  }
+  .logo i {
+    font-size: 8rem;
+  }
+  .controls {
+    display: none;
+  }
+  .cube-wrapper {
+    opacity: 0.9;
+  }
+  .cube {
+    top: 1rem;
+  }
+  .section-1-banner {
+    position: absolute;
+  }
+  .section-1-banner h1 {
+    left: -5rem;
+
+    font-weight: 300;
+  }
+  .section-1-banner h1,
+  .section-1-banner p,
+  .section-1-banner span {
+    z-index: 1;
+    position: relative;
+  }
+  .section-1-banner h1::after,
+  .section-1-banner p::after,
+  .section-1-banner span::after {
+    content: "";
+    background-color: var(--white-color);
+    top: 50%;
+    left: 60%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) skewX(5deg);
+    z-index: -1;
+    opacity: 0.7;
+  }
+  .section-1-banner p::after,
+  .section-1-banner span::after {
+    left: 50%;
+  }
+  .section-1-banner h1::first-letter {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .section-1-banner button:hover {
+    clip-path: polygon(
+      50% 0%,
+      81% 5%,
+      100% 0,
+      100% 100%,
+      80% 95%,
+      50% 100%,
+      20% 95%,
+      0 100%,
+      0 0,
+      23% 5%
+    );
+  }
+  .iphones {
+    width: 100vw;
+    height: 100vh;
+  }
+  .macbook-info-heading {
+    font-size: 4rem;
+    text-shadow: 0.2rem 0.2rem 0.1rem rgb(155, 155, 155);
+  }
+  .macbook-price {
+    font-weight: 400;
+  }
+  .airpods {
+    width: 90%;
+  }
+  .section-5-heading {
+    font-size: 10rem;
+    color: var(--primary-color);
+  }
+  .airpods .airpods-img-1 {
+    width: 100%;
+    box-shadow: 1rem 1rem 1rem #ccc, -1rem -1rem 1rem #ccc;
+  }
+  .airpods .airpods-img-2 {
+    width: 0;
+  }
+  .section-5-buttons {
+    left: 52%;
+  }
+  .airpod-btn {
+    font-size: 3rem;
+    width: max-content;
+    width: 16rem;
+    height: 8rem;
+  }
+  .copyright {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 40%;
+  }
+  .logo {
+    left: 50%;
+    top: 5rem;
+    transform: translate(-50%, -50%);
+  }
+  .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+  }
+  .navbar-link {
+    font-size: 2.5rem;
+  }
+  .section-2-heading {
+    font-size: 8rem;
+  }
+  .section-3-heading {
+    font-size: 8rem;
+  }
+  .section-4-heading {
+    margin: 8rem 0;
+  }
+  .watches {
+    height: 70%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 30%;
+  }
+  .section-1-banner h1,
+  .section-1-banner p {
+    text-align: center;
+  }
+  .section-1-banner p {
+    font-size: 3rem;
+  }
+  .section-2,
+  .section-3 {
+    height: 80vh;
+  }
+  .airpods {
+    height: 80%;
+  }
+}
+@media (max-width: 350px) {
+  html {
+    font-size: 27%;
+  }
+}
+@media (max-width: 300px) {
+  html {
+    font-size: 25%;
+  }
+}
+/* END OF RESPONSIVE */
