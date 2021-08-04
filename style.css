@@ -555,18 +555,13 @@ body {
 
 .watch-cases {
   flex-direction: column;
-  margin-bottom: 10rem; /* 35*/
+  margin-bottom: 35rem; /* 35*/
   transition: all 0.5s;
 }
-.change.watch-cases {
-  animation: watchFirstB 4s forwards;
-}
+
 .watch-bands {
-  margin-left: 10rem; /* 35*/
+  margin-left: 35rem; /* 35*/
   transition: all 0.5s;
-}
-.change.watch-bands {
-  animation: watchFirstL 4s forwards;
 }
 
 @keyframes watchFirstL {
