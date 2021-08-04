@@ -899,9 +899,9 @@ body {
 }
 
 @media (max-width: 450px) {
-  /* html {
+  html {
     font-size: 30%;
-  } */
+  }
   .section-1-banner h1,
   .section-1-banner p {
     text-align: center;
