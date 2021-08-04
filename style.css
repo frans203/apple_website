@@ -535,6 +535,7 @@ body {
   flex-direction: column;
   position: relative;
 }
+
 .section-4-heading {
   text-align: center;
   font-size: 10rem;
@@ -735,6 +736,12 @@ body {
 @media (max-width: 1100px) {
   html {
     font-size: 45%;
+  }
+  .section-4 {
+    display: none;
+  }
+  .watch-link {
+    display: none;
   }
   .navbar-link {
     font-weight: 600;

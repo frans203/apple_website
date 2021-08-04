@@ -167,8 +167,8 @@ watchControls.forEach((c) => {
   });
 });
 // end of  section 4 watches
-if (/|iPhone|/i.test(navigator.userAgent)) {
-  document.querySelector(".section-4").style.display = "none";
+if (/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  document.querySelector(".section-4").style.display = "block";
 
-  document.querySelector(".watch-link").style.display = "none";
+  document.querySelector(".watch-link").style.display = "block";
 }
