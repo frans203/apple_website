@@ -548,6 +548,7 @@ body {
   height: 100%;
   overflow: hidden;
   position: relative;
+  margin: auto;
 }
 .watches > div {
   position: absolute;
@@ -555,12 +556,14 @@ body {
 
 .watch-cases {
   flex-direction: column;
-  margin-bottom: 35rem; /* 35*/
+  margin-bottom: 35rem;
+
   transition: all 0.5s;
 }
 
 .watch-bands {
-  margin-left: 35rem; /* 35*/
+  margin-left: 35rem;
+
   transition: all 0.5s;
 }
 
@@ -710,6 +713,7 @@ body {
   position: absolute;
   bottom: 1rem;
   letter-spacing: 0.1;
+  text-align: center;
 }
 .github {
   transition: all 0.5s;
@@ -895,9 +899,9 @@ body {
 }
 
 @media (max-width: 450px) {
-  html {
+  /* html {
     font-size: 30%;
-  }
+  } */
   .section-1-banner h1,
   .section-1-banner p {
     text-align: center;
