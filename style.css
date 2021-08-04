@@ -21,6 +21,9 @@ html {
 body {
   overflow-x: hidden;
 }
+.container {
+  overflow: hidden;
+}
 .center {
   display: flex;
   align-items: center;
