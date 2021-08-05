@@ -745,7 +745,7 @@ body {
   .watch-link {
     display: none;
   }
-  .footer-imgs:nth-child(4) {
+  .footer-imgs a:nth-child(4) {
     display: none;
   }
   .navbar-link {
