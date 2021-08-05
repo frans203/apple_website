@@ -167,8 +167,8 @@ watchControls.forEach((c) => {
   });
 });
 // end of  section 4 watches
-if (/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  document.querySelector(".section-4").style.display = "block";
+// if (/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//   document.querySelector(".section-4").style.display = "block";
 
-  document.querySelector(".watch-link").style.display = "block";
-}
+//   document.querySelector(".watch-link").style.display = "block";
+// }
