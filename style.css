@@ -706,7 +706,7 @@ body {
   position: relative;
 }
 .footer-imgs img {
-  width: 8rem;
+  width: 6rem;
 }
 .copyright {
   font-size: 2rem;
@@ -901,10 +901,6 @@ body {
   }
   .watches {
     height: 70%;
-  }
-  .footer-imgs {
-    display: flex;
-    flex-direction: column;
   }
 }
 
