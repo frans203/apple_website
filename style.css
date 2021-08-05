@@ -904,7 +904,8 @@ body {
     height: 70%;
   }
   .footer-imgs {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 
