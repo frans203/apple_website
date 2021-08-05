@@ -739,12 +739,12 @@ body {
   html {
     font-size: 45%;
   }
-  /* .section-4 {
+  .section-4 {
     display: none;
   }
   .watch-link {
     display: none;
-  } */
+  }
   .navbar-link {
     font-weight: 600;
   }
