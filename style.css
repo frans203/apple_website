@@ -903,6 +903,9 @@ body {
   .watches {
     height: 70%;
   }
+  .footer-imgs {
+    text-align: center;
+  }
 }
 
 @media (max-width: 450px) {
